@@ -1,6 +1,11 @@
 import os
 from dotenv import load_dotenv
 import getpass
+from langchain_community.document_loaders import WebBaseLoader #Step 2: Load Docs
+import bs4 #Step 2: Load Docs
+from langchain_text_splitters import RecursiveCharacterTextSplitter #Step 2: Split Docs into Chunks
+from langchain_chroma import Chroma #Step 2: Embed Chunks and store in Vector
+from langchain_openai import OpenAIEmbeddings #Step 2: Embed Chunks and store in Vector
 
 load_dotenv()
 
